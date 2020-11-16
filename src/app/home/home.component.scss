@@ -1,0 +1,30 @@
+.wrapper{
+    display: flex;
+    height: 400px;
+}
+
+.content{
+    width: 70%;
+    display: flex;
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sidebar{
+    width: 30%;
+    display: flex;
+    background-color: purple;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.footer{
+    height: 100px;
+    display: flex;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

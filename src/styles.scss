@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+// lưu ý là angular sẽ ưu tiên các style có trong component hơn là style ở global
+.demo{
+    color: green;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}

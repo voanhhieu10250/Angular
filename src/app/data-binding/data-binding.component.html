@@ -1,0 +1,36 @@
+<!-- Interpolation -->
+<p>
+  {{ message }}
+</p>
+<input value="{{ message }}" />
+
+<!-- proprety binding -->
+<input [value]="message" [disabled]="!isActive" />
+
+<!-- Event binding -->
+<button (click)="handleChangeActive()">Toggle</button>
+<br />
+<br />
+<br />
+
+<p>{{ username }}</p>
+
+<input [value]="username" (change)="handleChangeUsername($event)" />
+<input [value]="username" (input)="handleChangeUsername($event)" />
+<br />
+<br />
+
+<p>{{ fullname }}</p>
+<input [value]="fullname" #fullNameRef />
+<button (click)="handleChangeFullName(fullNameRef.value)">Submit</button>
+<br />
+<br />
+<br />
+
+<p>{{ email }}</p>
+<input [value]="email" (input)="email = $event.target.value" />
+
+<!-- Two way binding -->
+<!-- muốn sử dụng two-way binding cần inport thư viện FormsModule vào module quản lý component -->
+<p>{{ address }}</p>
+<input [(ngModel)]="address" />
