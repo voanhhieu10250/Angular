@@ -1,3 +1,6 @@
+import { ShoppingModule } from './shopping/shopping.module';
+import { MovieModule } from './movie/movie.module';
+import { DirectivesModule } from './directives/directives.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -27,7 +30,10 @@ import { DataBindingModule } from './data-binding/data-binding.module';
     BrowserModule,
     HomeModule,
     Baitap2Module,
-    DataBindingModule
+    DataBindingModule,
+    DirectivesModule,
+    MovieModule,
+    ShoppingModule
   ],
 
   // providers: nơi khái báo các services
