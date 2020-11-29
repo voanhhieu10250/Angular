@@ -15,8 +15,9 @@ import { ItemComponent } from './item/item.component';
   imports: [
     CommonModule
   ],
-  exports: [
-    Baitap2Component
-  ]
+  //không cần phải exports nữa nếu như sài routing
+  // exports: [
+  //   Baitap2Component
+  // ]
 })
 export class Baitap2Module { }

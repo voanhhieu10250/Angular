@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {CartComponent} from './cart/cart.component'
+import { CartComponent } from './cart/cart.component'
 
 @Component({
   selector: 'app-shopping',
@@ -14,8 +14,8 @@ export class ShoppingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleAddToCart(product: any){
+  handleAddToCart(product: any) {
     //viewChild tới cart là gọi hàm handleAddToCart
-    this.cartComponent.handleAddToCart(product)
+    // this.cartComponent.handleAddToCart(product)
   }
 }

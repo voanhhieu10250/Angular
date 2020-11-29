@@ -1,3 +1,8 @@
+import { AdminRoutingModule } from './admin/admin-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { ComponentsModule } from './shared/components/components.module';
+import { PipeModule } from './shared/pipe/pipe.module';
+import { Baitap8Module } from './baitap8/baitap8.module';
 import { ShoppingModule } from './shopping/shopping.module';
 import { MovieModule } from './movie/movie.module';
 import { DirectivesModule } from './directives/directives.module';
@@ -5,9 +10,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
-import {HomeModule} from './home/home.module';
-import {Baitap2Module} from './baitap2/baitap2.module'
+import { HomeModule } from './home/home.module';
+import { Baitap2Module } from './baitap2/baitap2.module'
 import { DataBindingModule } from './data-binding/data-binding.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // NgModule: meta-data
 @NgModule({
@@ -33,7 +39,13 @@ import { DataBindingModule } from './data-binding/data-binding.module';
     DataBindingModule,
     DirectivesModule,
     MovieModule,
-    ShoppingModule
+    ShoppingModule,
+    Baitap8Module,
+    PipeModule,
+    BrowserAnimationsModule,
+    ComponentsModule,
+    AppRoutingModule,
+    AdminRoutingModule
   ],
 
   // providers: nơi khái báo các services
