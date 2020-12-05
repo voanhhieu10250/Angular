@@ -6,8 +6,13 @@
 // }
 
 export interface Movie {
-    id: number
-    name: string
-    price: number
-    image: string
+    maPhim: number;
+    tenPhim: string;
+    biDanh: string;
+    trailer: string;
+    hinhAnh: string;
+    moTa: string;
+    maNhom: string;
+    ngayKhoiChieu: Date;
+    danhGia: number;
 }

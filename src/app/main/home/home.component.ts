@@ -27,10 +27,11 @@ export class HomeComponent implements OnInit {
     //     console.log(err)
     //   })
 
-    this.movieService.getMovieListObservable().subscribe({
+    this.movieService.getMovieList().subscribe({
       // next: Nhận kết quả
       next: (result) => {
-        console.log(result)
+        console.log(result);
+        this.movieList = result;
       },
       // error: Nhận lỗi
       error: error => {

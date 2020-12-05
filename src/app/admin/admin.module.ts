@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../shared/components/components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +12,8 @@ import { MovieComponent } from './movie/movie.component';
   declarations: [UserComponent, LayoutComponent, MovieComponent],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ComponentsModule
   ]
 })
 export class AdminModule { }

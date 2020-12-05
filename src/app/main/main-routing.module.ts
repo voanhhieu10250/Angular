@@ -13,7 +13,7 @@ const routes: Routes = [
     path: "", component: LayoutComponent,
     children: [
       { path: "", component: HomeComponent },
-      { path: "movie", component: MovieComponent },
+      { path: "movie/:movieId", component: MovieComponent },
     ]
   }
 
