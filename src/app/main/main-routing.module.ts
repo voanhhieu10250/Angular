@@ -1,3 +1,5 @@
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -14,6 +16,8 @@ const routes: Routes = [
     children: [
       { path: "", component: HomeComponent },
       { path: "movie/:movieId", component: MovieComponent },
+      { path: "signin", component: SigninComponent },
+      { path: "signup", component: SignupComponent }
     ]
   }
 

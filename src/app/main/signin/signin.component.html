@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 mx-auto">
+      <h1 class="text-center">Signin</h1>
+      <!-- signinForm.value => {taiKhoan: "abc"} -->
+      <form #signinForm="ngForm" (ngSubmit)="handleSignin()">
+        <div class="form-group">
+          <label>Tài khoản</label>
+          <!-- ngModel: lấy value của input -->
+          <!-- #taiKhoan="ngModel": lấy ra trạng thái của ô input -->
+          <!-- touched - untouched, pristine - dirty, invalid - valid -->
+          <input
+            type="text"
+            name="taiKhoan"
+            class="form-control"
+            ngModel
+            #taiKhoan="ngModel"
+            required
+            minlength="3"
+            maxlength="20"
+          />
+          <div
+            *ngIf="taiKhoan.invalid && (taiKhoan.dirty || taiKhoan.touched)"
+            class="alert alert-danger"
+          >
+            <span *ngIf="taiKhoan.errors.required"
+              >Tài khoản không được để trống</span
+            >
+            <span *ngIf="taiKhoan.errors.minlength || taiKhoan.errors.maxlength"
+              >Tài khoản phải từ 3 đến 20 kí tự</span
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Mật Khẩu</label>
+          <!-- chú ý là phải có ngModel -->
+          <input
+            type="password"
+            name="matKhau"
+            class="form-control"
+            ngModel
+            #matKhau="ngModel"
+            required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          />
+          <div
+            *ngIf="matKhau.invalid && (matKhau.dirty || matKhau.touched)"
+            class="alert alert-danger"
+          >
+            <span *ngIf="matKhau.errors.required"
+              >Mật khẩu không được để trống</span
+            >
+            <span *ngIf="matKhau.errors.pattern"
+              >Mật khẩu có 1 ký tự hoa, 1 ký tự thường và phải từ 8 trở
+              lên</span
+            >
+          </div>
+        </div>
+        <button class="btn btn-success" [disabled]="signinForm.invalid">
+          Đăng nhập
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
